@@ -40,7 +40,6 @@ const onChangePassword = function (event) {
   event.preventDefault();
   const form = event.target;
   const data = getFormFields(form);
-  console.log('changing password', data);
 
   authApi
     .changePassword(data)

@@ -88,8 +88,10 @@
       </form>
 
       <form id="update-game-form">
+        <input name="games[id]" type="text" placeholder="Game ID" />
         <input name="games[name]" type="text" placeholder="Game name" />
         <input name="games[gameType]" type="text" placeholder="Type of game?" />
+
         <input
           name="games[numOfPlayers]"
           type="text"
@@ -113,6 +115,9 @@
         <input name="games[id]" type="text" placeholder="Game ID" />
         <button id="delete-one-game-btn" type="submit">Delete Game</button>
       </form>
+    </section>
+    <section>
+      <p id="games-display">Show games here</p>
     </section>
   </body>
 </html>
