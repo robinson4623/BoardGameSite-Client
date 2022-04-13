@@ -1,17 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>BGT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+    <!-- Do not add `script` tags-->
+    <script
+      src="public/vendor.js"
+      type="text/javascript"
+      charset="utf-8"
+      defer
+    ></script>
+    <script
+      src="public/application.js"
+      type="text/javascript"
+      charset="utf-8"
+      defer
+    ></script>
+  </head>
+  <body>
+    <h1>Board Game Tracker</h1>
+
+    <section>
+      <h3 id="status-message"></h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="Email" />
+        <input
+          name="credentials[password]"
+          type="password"
+          placeholder="Enter password"
+        />
+        <input
+          name="credentials[password_confirmation]"
+          type="password"
+          placeholder="Enter password again"
+        />
+        <button id="sign-up-btn" type="click">Sign Up</button>
+      </form>
+
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="Email" />
+        <input
+          name="credentials[password]"
+          type="password"
+          placeholder="Enter password"
+        />
+        <button id="sign-in-byn" type="submit">Sign in</button>
+      </form>
+
+      <form id="change-password-form">
+        <input
+          name="credentials[password]"
+          type="password"
+          placeholder="Enter old password"
+        />
+        <input
+          name="credentials[new_password]"
+          type="password"
+          placeholder="Enter password again"
+        />
+        <button id="change-password-btn" type="submit">Change password</button>
+      </form>
+
+      <div>
+        <button id="sign-out-button" type="click">Sign out</button>
+      </div>
+    </section>
+
+    <section>
+      <form id="add-game-form">
+        <input name="games[name]" type="text" placeholder="Game name" />
+        <input name="games[gameType]" type="text" placeholder="Type of game?" />
+        <input
+          name="games[numOfPlayers]"
+          type="text"
+          placeholder="How many players?"
+        />
+        <input
+          name="games[rating]"
+          type="number"
+          placeholder="Rating? 0 - 10"
+        />
+        <button id="add-game-btn" type="submit">Add Game</button>
+      </form>
+
+      <form id="update-game-form">
+        <input name="games[name]" type="text" placeholder="Game name" />
+        <input name="games[gameType]" type="text" placeholder="Type of game?" />
+        <input
+          name="games[numOfPlayers]"
+          type="text"
+          placeholder="How many players?"
+        />
+        <input
+          name="games[rating]"
+          type="number"
+          placeholder="Rating? 0 - 10"
+        />
+        <button id="update-game-btn" type="submit">Update Game</button>
+      </form>
+
+      <button id="index-games-btn" type="submit">Show All Games</button>
+      <form id="find-game-form">
+        <input name="games[id]" type="text" placeholder="Game ID" />
+        <button id="find-one-game-btn" type="submit">Find One Game</button>
+      </form>
+
+      <form id="delete-game-form">
+        <input name="games[id]" type="text" placeholder="Game ID" />
+        <button id="delete-one-game-btn" type="submit">Delete Game</button>
+      </form>
+    </section>
+  </body>
 </html>
