@@ -1,1 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: darkgrey;
+}
+
+#add-game-form {
+  display: none;
+}
+
+#change-password-form {
+  display: none;
+}

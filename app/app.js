@@ -20,6 +20,13 @@ $(() => {
   $('#update-game-form').on('submit', gameEvents.onUpdateGame);
   $('#delete-game-form').on('submit', gameEvents.onDeleteGame);
   $('#find-game-form').on('submit', gameEvents.onShowGame);
+  $('#show-add-game').on('click', function () {
+    $('#add-game-form').toggle();
+  });
+  $('#show-change-password').on('click', function () {
+    $('#change-password-form').toggle();
+  });
+
   // $('#games-display').on(
   //   'click',
   //   '.games-destroy-dynamic',
@@ -31,5 +38,4 @@ $(() => {
   //   '.games-update-dynamic',
   //   console.log('dynamic update clicked')
   //   // gameEvents.onDynamicUpdateGame
-  // );
 });

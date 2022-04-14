@@ -55,6 +55,7 @@ const onSignOutFailure = function () {
 
 const onChangePasswordSuccess = function () {
   $('#status-message').html('<p>Password successfully.</p>');
+  $('form').trigger('reset');
   // $('#sign-up-form').css('display', 'inherit');
   // $('#sign-in-form').css('display', 'inherit');
   // $('#sign-out-button').css('display', 'none');
