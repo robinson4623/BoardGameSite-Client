@@ -18,6 +18,8 @@ $(() => {
   $('#add-game-form').on('submit', gameEvents.onAddGame);
   $('#index-games-btn').on('click', gameEvents.onIndexGames);
   $('#update-game-form').on('submit', gameEvents.onUpdateGame);
+  $('#delete-game-form').on('submit', gameEvents.onDeleteGame);
+  $('#find-game-form').on('submit', gameEvents.onShowGame);
   // $('#games-display').on(
   //   'click',
   //   '.games-destroy-dynamic',

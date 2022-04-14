@@ -37,6 +37,30 @@ const updateGame = function (data) {
   });
 };
 
+const deleteGame = function (data) {
+  console.log(data);
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + '/games/' + data.games.id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token,
+    },
+    data,
+  });
+};
+
+const showGame = function (data) {
+  console.log(data);
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/games/' + data.games.id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token,
+    },
+    data,
+  });
+};
+
 // const getGames = function (data) {
 //   return $.ajax({
 //     method: 'GET',
@@ -51,4 +75,6 @@ module.exports = {
   addGame,
   indexGames,
   updateGame,
+  deleteGame,
+  showGame,
 };

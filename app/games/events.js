@@ -34,8 +34,34 @@ const onUpdateGame = function (event) {
     .catch(() => gamesUi.onUpdateGameFailure());
 };
 
+const onDeleteGame = function (event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = getFormFields(form);
+  console.log(data);
+
+  gamesApi
+    .deleteGame(data)
+    .then(response => gamesUi.onDeleteGameSuccess(response))
+    .catch(() => gamesUi.onDeleteGameFailure());
+};
+
+const onShowGame = function (event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = getFormFields(form);
+  console.log(data);
+
+  gamesApi
+    .showGame(data)
+    .then(response => gamesUi.onShowGameSuccess(response))
+    .catch(() => gamesUi.onShowGameFailure());
+};
+
 module.exports = {
   onAddGame,
   onIndexGames,
   onUpdateGame,
+  onDeleteGame,
+  onShowGame,
 };

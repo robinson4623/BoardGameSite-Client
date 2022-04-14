@@ -32,6 +32,7 @@ const onIndexGamesSuccess = function (responseData) {
       <p>Players: ${game.numOfPlayers}</p>
       <p>Rating: ${game.rating}</p>
       <p>ID: ${game._id}</p>
+      <p>Owner: ${game.owner}</p>
        
  
       <br>
@@ -79,6 +80,53 @@ const onUpdateGameFailure = function () {
   // $('#sign-up-form').hide();
 };
 
+const onDeleteGameSuccess = function () {
+  $('form').trigger('reset');
+  //$('#auth-result').html('<p>All set</p>');
+  //$('#sign-up-form').css('display', 'none');
+  // $('#sign-up-head').html('<p>Signed up and ready to go!</p>');
+  $('#status-message').html('<p>Game Successfully Deleted</p>');
+  //$('#sign-up-form').hide();
+};
+
+const onDeleteGameFailure = function () {
+  //$('form').trigger('reset');
+  //$('#auth-result').html('<p>All set</p>');
+  //$('#sign-up-form').css('display', 'none');
+  // $('#sign-up-head').html('<p>Signed up and ready to go!</p>');
+  $('#status-message').html('<p>Game was not deleted</p>');
+  // $('#sign-up-form').hide();
+};
+
+const onShowGameSuccess = function (responseData) {
+  $('form').trigger('reset');
+  const game = responseData.game;
+  const gamesHtml = ` <h4>Title: ${game.name}</h4>
+      <p>Type: ${game.gameType}</p>
+      <p>Players: ${game.numOfPlayers}</p>
+      <p>Rating: ${game.rating}</p>
+      <p>ID: ${game._id}</p>
+      <p>Owner: ${game.owner}</p>
+       
+      <br>
+        `;
+  //$('#auth-result').html('<p>All set</p>');
+  //$('#sign-up-form').css('display', 'none');
+  // $('#sign-up-head').html('<p>Signed up and ready to go!</p>');
+  $('#games-display').html(gamesHtml);
+  $('#status-message').html('<p>Game Successfully Showing</p>');
+  //$('#sign-up-form').hide();
+};
+
+const onShowGameFailure = function () {
+  //$('form').trigger('reset');
+  //$('#auth-result').html('<p>All set</p>');
+  //$('#sign-up-form').css('display', 'none');
+  // $('#sign-up-head').html('<p>Signed up and ready to go!</p>');
+  $('#status-message').html('<p>Game cannot be found</p>');
+  // $('#sign-up-form').hide();
+};
+
 module.exports = {
   onAddGameSuccess,
   onAddGameFailure,
@@ -86,4 +134,8 @@ module.exports = {
   onIndexGamesFailure,
   onUpdateGameSuccess,
   onUpdateGameFailure,
+  onDeleteGameSuccess,
+  onDeleteGameFailure,
+  onShowGameSuccess,
+  onShowGameFailure,
 };
