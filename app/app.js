@@ -30,15 +30,10 @@ $(() => {
     $('#update-game-form').toggle();
   });
 
-  // $('#games-display').on(
-  //   'click',
-  //   '.games-destroy-dynamic',
-  //   console.log('dynamic delete clicked')
-  //   // gameEvents.onDynamicDestroyGame
-  // );
-  // $('#games-display').on(
-  //   'submit',
-  //   '.games-update-dynamic',
-  //   console.log('dynamic update clicked')
-  //   // gameEvents.onDynamicUpdateGame
+  $('#show-find-game').on('click', function () {
+    $('#find-game-form').toggle();
+  });
+  $('#show-delete-game').on('click', function () {
+    $('#delete-game-form').toggle();
+  });
 });

@@ -28,9 +28,11 @@ const onSignInSuccess = function (response) {
   $('#show-change-password').show();
   $('#show-add-game').show();
   $('#show-update-game').show();
-  $('#find-game-form').show();
-  $('#delete-game-form').show();
+  //$('#find-game-form').show();
+  //$('#delete-game-form').show();
   $('#index-games-btn').show();
+  $('#show-find-game').show();
+  $('#show-delete-game').show();
 
   store.user = response.user;
 };
@@ -54,6 +56,9 @@ const onSignOutSuccess = function () {
   $('#show-update-game').hide();
   $('#update-game-form').hide();
   $('#add-game-form').hide();
+  $('#show-find-game').hide();
+  $('#show-delete-game').hide();
+  $('#games-display').html('<p></p>');
   // gameEvents.currentPlayer = gameEvents.player1;
   // gameEvents.currentPlayerImage = gameEvents.player1Image;
   // gameEvents.currentPlayerWinImage = gameEvents.player1WinImage;

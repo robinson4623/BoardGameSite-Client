@@ -25,6 +25,7 @@
     <h1>Board Game Tracker</h1>
     <div>
       <button id="sign-out-btn" type="click">Sign out</button>
+      <button id="show-change-password">Change your password</button>
     </div>
 
     <section>
@@ -57,7 +58,6 @@
         <button id="sign-in-byn" type="submit">Sign in</button>
       </form>
 
-      <button id="show-change-password">Change your password</button>
       <form id="change-password-form">
         <input
           name="passwords[old]"
@@ -115,10 +115,15 @@
       </form>
 
       <button id="index-games-btn" type="submit">Show Your Games</button>
+
+      <button id="show-find-game">Find your game</button>
+
       <form id="find-game-form">
         <input name="games[id]" type="text" placeholder="Game ID" />
         <button id="find-one-game-btn" type="submit">Find Your Game</button>
       </form>
+
+      <button id="show-delete-game">Delete a game</button>
 
       <form id="delete-game-form">
         <input name="games[id]" type="text" placeholder="Game ID" />
