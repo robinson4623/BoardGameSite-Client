@@ -13,7 +13,7 @@ const gameUi = require('./games/ui');
 $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp);
   $('#sign-in-form').on('submit', authEvents.onSignIn);
-  $('#sign-out-button').on('click', authEvents.onSignOut);
+  $('#sign-out-btn').on('click', authEvents.onSignOut);
   $('#change-password-form').on('submit', authEvents.onChangePassword);
   $('#add-game-form').on('submit', gameEvents.onAddGame);
   $('#index-games-btn').on('click', gameEvents.onIndexGames);
@@ -25,6 +25,9 @@ $(() => {
   });
   $('#show-change-password').on('click', function () {
     $('#change-password-form').toggle();
+  });
+  $('#show-update-game').on('click', function () {
+    $('#update-game-form').toggle();
   });
 
   // $('#games-display').on(

@@ -23,10 +23,15 @@
   </head>
   <body>
     <h1>Board Game Tracker</h1>
+    <div>
+      <button id="sign-out-btn" type="click">Sign out</button>
+    </div>
 
     <section>
       <h3 id="status-message"></h3>
+
       <form id="sign-up-form">
+        <h3>Sign Up</h3>
         <input name="credentials[email]" type="email" placeholder="Email" />
         <input
           name="credentials[password]"
@@ -42,6 +47,7 @@
       </form>
 
       <form id="sign-in-form">
+        <h3>Sign In</h3>
         <input name="credentials[email]" type="email" placeholder="Email" />
         <input
           name="credentials[password]"
@@ -65,14 +71,10 @@
         />
         <button id="change-password-btn" type="submit">Change password</button>
       </form>
-
-      <div>
-        <button id="sign-out-button" type="click">Sign out</button>
-      </div>
     </section>
 
     <section>
-      <button id="show-add-game">Add a game?</button>
+      <button id="show-add-game">Add game</button>
       <form id="add-game-form">
         <input name="games[name]" type="text" placeholder="Game name" />
         <input name="games[gameType]" type="text" placeholder="Type of game?" />
@@ -88,10 +90,15 @@
         />
         <button id="add-game-btn" type="submit">Add Game</button>
       </form>
-
+      <button id="show-update-game">Update game</button>
       <form id="update-game-form">
         <input name="games[id]" type="text" placeholder="Game ID" />
         <input name="games[name]" type="text" placeholder="Game name" />
+
+        <!-- <select name="games[gameType]">
+          <option value="Deck Builder" selected>Deck Builder</option>
+          <option value="Worker Placement">Worker Placement</option>
+        </select> -->
         <input name="games[gameType]" type="text" placeholder="Type of game?" />
 
         <input
@@ -107,10 +114,10 @@
         <button id="update-game-btn" type="submit">Update Game</button>
       </form>
 
-      <button id="index-games-btn" type="submit">Show All Games</button>
+      <button id="index-games-btn" type="submit">Show Your Games</button>
       <form id="find-game-form">
         <input name="games[id]" type="text" placeholder="Game ID" />
-        <button id="find-one-game-btn" type="submit">Find One Game</button>
+        <button id="find-one-game-btn" type="submit">Find Your Game</button>
       </form>
 
       <form id="delete-game-form">
@@ -119,7 +126,7 @@
       </form>
     </section>
     <section>
-      <p id="games-display">Show games here</p>
+      <p id="games-display"></p>
     </section>
   </body>
 </html>
