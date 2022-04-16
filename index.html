@@ -21,7 +21,182 @@
       defer
     ></script>
   </head>
-  <body>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      id="mainNav"
+    >
+      <div class="container px-4">
+        <a class="navbar-brand" href="#page-top">Board Game Tracker</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sign-up">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sign-in">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#findgame">Find a game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sign-in-nav-link" href="#showgames"
+                >Show Games</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-primary bg-gradient text-white">
+      <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Welcome to Board Game Tracker</h1>
+        <p class="lead">Track your Board and Table Top game collection! now</p>
+        <a class="btn btn-lg btn-light" href="#sign-up">Sign Up</a>
+      </div>
+    </header>
+    <!-- Sign up section-->
+    <section id="sign-up">
+      <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+          <div class="col-lg-8">
+            <h2>Sign Up and Start Adding Your Games</h2>
+            <h3 id="status-message"></h3>
+            <form id="sign-up-form">
+              <input
+                name="credentials[email]"
+                type="email"
+                placeholder="Email"
+              />
+              <input
+                name="credentials[password]"
+                type="password"
+                placeholder="Enter password"
+              />
+              <input
+                name="credentials[password_confirmation]"
+                type="password"
+                placeholder="Enter password again"
+              />
+              <button id="sign-up-btn" type="click">Sign Up</button>
+            </form>
+            <ul>
+              <li>
+                Signing up gives you access to storing information about your
+                game collection. Whether you have just a few games, or whether
+                you have an entire room dedicated to your hobby, we can help you
+                keep track of it!
+              </li>
+              <li>
+                Track details like name, player count, your rating, and the type
+                of game.
+              </li>
+              <li>
+                Update your game if you decide that your initial rating needs
+                adjusting!
+              </li>
+              <li>New features being added all the time.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sign In section-->
+    <section class="bg-light" id="services">
+      <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+          <div class="col-lg-8">
+            <h2>Sign In to Access your Collection</h2>
+              <button id="sign-out-btn" type="click">Sign out</button>
+              <button id="show-change-password">Change your password</button>
+            <p class="lead">
+                <form id="sign-in-form">
+        
+        <input name="credentials[email]" type="email" placeholder="Email" />
+        <input
+          name="credentials[password]"
+          type="password"
+          placeholder="Enter password"
+        />
+        <button id="sign-in-byn" type="submit">Sign in</button>
+      </form>
+
+      <form id="change-password-form">
+        <input
+          name="passwords[old]"
+          type="password"
+          placeholder="Enter old password"
+        />
+        <input
+          name="passwords[new]"
+          type="password"
+          placeholder="Enter password again"
+        />
+        <button id="change-password-btn" type="submit">Change password</button>
+      </form>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Find Game section-->
+    <section id="findgame">
+      <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+          <div class="col-lg-8">
+            <h2>Find a game</h2>
+            <p class="lead">
+               <form id="find-game-form">
+                <input name="games[id]" type="text" placeholder="Game ID" />
+                <button id="find-one-game-btn" type="submit">Find Your Game</button>
+              </form>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact section-->
+    <section class="bg-light" id="showgames">
+      <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+          <div class="col-lg-8">
+            <h2>Show your collection</h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+              odio fugiat voluptatem dolor, provident officiis, id iusto!
+              Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
+              exercitationem, in, quo totam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container px-4">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Your Website 2022
+        </p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
     <h1>Board Game Tracker</h1>
     <div>
       <button id="sign-out-btn" type="click">Sign out</button>
@@ -29,8 +204,6 @@
     </div>
 
     <section>
-      <h3 id="status-message"></h3>
-
       <form id="sign-up-form">
         <h3>Sign Up</h3>
         <input name="credentials[email]" type="email" placeholder="Email" />
