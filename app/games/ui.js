@@ -31,8 +31,8 @@ const onIndexGamesSuccess = function (responseData) {
       <p>Type: ${game.gameType}</p>
       <p>Players: ${game.numOfPlayers}</p>
       <p>Rating: ${game.rating}</p>
-      <p>ID: ${game._id}</p>
-      <p>Owner: ${game.owner}</p>
+      <p>Game ID: ${game._id}</p>
+      <p>Owner ID: ${game.owner}</p>
        
  
       <br>

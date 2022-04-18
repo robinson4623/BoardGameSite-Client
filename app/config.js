@@ -1,6 +1,6 @@
 let apiUrl;
 const apiUrls = {
-  production: 'https://boardgametracker-api.herokuapp.com',
+  production: 'https://boardgamesite-api.herokuapp.com',
   development: 'http://localhost:4741',
 };
 
