@@ -27,9 +27,8 @@ const onSignIn = function (event) {
 };
 
 const onSignOut = function () {
-  console.log('Sign out event');
-  //$('#0').html(<img src=""></img>);
-  //`<img src="${store.currentPlayerImage}" height="120px" width="120px">`;
+  
+  
   authApi
     .signOut()
     .then(response => authUi.onSignOutSuccess(response))
