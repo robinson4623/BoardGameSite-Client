@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: darkgrey;
+  text-align: center;
+}
+
+#add-game-form {
+  display: none;
+}
+
+#change-password-form,
+#show-change-password,
+#show-add-game,
+#show-update-game,
+#update-game-form,
+#sign-out-btn,
+#index-games-btn,
+#find-game-form,
+#delete-game-form,
+#show-find-game,
+#show-delete-game,
+#delete-game-form,
+#find-game-form {
+  display: none;
+}
