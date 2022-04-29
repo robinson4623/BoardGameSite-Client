@@ -18,9 +18,6 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (response) {
   $('form').trigger('reset')
-  // $('#auth-result').html('<p>All set</p>');
-  // $('#sign-up-form').css('display', 'none');
-  // $('#sign-up-head').html('<p>Signed up and ready to go!</p>');
   $('#status-message').html('<p>All signed in</p>')
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
@@ -28,8 +25,6 @@ const onSignInSuccess = function (response) {
   $('#show-change-password').show()
   $('#show-add-game').show()
   $('#show-update-game').show()
-  // $('#find-game-form').show();
-  // $('#delete-game-form').show();
   $('#index-games-btn').show()
   $('#show-find-game').show()
   $('#show-delete-game').show()
@@ -59,6 +54,7 @@ const onSignOutSuccess = function () {
   $('#show-find-game').hide()
   $('#show-delete-game').hide()
   $('#games-display').html('<p></p>')
+  $('#change-password-form').hide()
 
   store.user = null
   store.response = null
